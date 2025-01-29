@@ -31,6 +31,8 @@ seeds:
 models:
   jaffle_shop:
     staging:
-      +materialized: view
+      +schema: stg
+      +materialized: table
     marts:
+      +schema: anls_core
       +materialized: table
