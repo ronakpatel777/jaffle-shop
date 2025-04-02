@@ -9,7 +9,8 @@
 
         {{ default_schema }}
 
-    {% elif target.name == 'sandbox' %}
+
+    {% elif target.name == 'sandbox' and node.resource_type != 'source' and node.resource_type != 'seed' %}
 
         {{ target.name }}_{{ default_schema }}_{{ custom_schema_name | trim }}
 
